@@ -14,12 +14,15 @@ image = Image.open("topsecret1.png")
 
 # Resize the image in the given (width, height)
 img = image.resize((int(433/2), int(280/2)))
-
+logo = ImageTk.PhotoImage(img)
+label_img = Label(image=logo)
+label_img.pack()
+'''
 canvas = Canvas(height=200, width=200)
 logo = ImageTk.PhotoImage(img)
 canvas.create_image(100, 100, image=logo)
 canvas.pack()
-
+'''
 label_title = Label(text="Title")
 label_title.pack()
 
